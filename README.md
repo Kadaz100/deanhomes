@@ -1,35 +1,58 @@
 # Dean Homes - Real Estate Platform
 
-A modern, premium real estate website platform with three main interfaces:
-- **Landing Page**: Beautiful property search and listing interface
-- **Seller Dashboard**: Professional property submission and management
-- **Admin Panel**: Comprehensive property approval and management system
+A modern, premium real estate website platform with Paystack payment integration, featuring:
+- **Landing Page**: Beautiful property search and listing interface with image galleries
+- **Seller Dashboard**: Professional property submission with minimum 4-image requirement
+- **Admin Portal**: Comprehensive property approval and management system with real-time statistics
+- **Property Details**: Full property pages with scrollable image galleries
+- **Payment Integration**: Paystack payment gateway for contact details (₦2,000)
 
 ## Features
 
 ### Landing Page
 - Large hero section with bold typography
-- Advanced search bar with filters (price, location, property type, size)
-- Three action cards: Buy Property, Rent Apartment, Buy Land
+- Advanced search bar with filters (location, property type, price range)
+- Three action cards: Buy Property, Rent Apartment, Buy Land (with filtering)
 - Property listing cards with images, prices, and location details
+- "Get More Info" button linking to detailed property pages
 - Smooth animations and transitions
 - Fully responsive design
+
+### Property Detail Pages
+- Scrollable image gallery (minimum 4 images required)
+- Left/right navigation arrows
+- Image indicators
+- Full property description
+- Contact information unlock via Paystack payment (₦2,000)
+- Different contact types: Owner (Land/House) or Agent (Apartment)
 
 ### Seller Dashboard
 - Clean sidebar navigation
 - Property submission form with all required fields
-- Image upload interface
+- Image upload interface (minimum 4 images required)
 - Property status tracking (Pending, Approved, Rejected)
 - My Properties view
 - Pending Approvals section
-- Messages interface
+- Real-time property sync
 
-### Admin Panel
-- Dashboard with key statistics (Total Listings, Pending Approvals, Approved Properties, Active Users)
+### Admin Portal
+- Dashboard with **real-time statistics**:
+  - Total Listings (actual count)
+  - Pending Approvals (real count)
+  - Approved Properties (real count)
+  - Active Users (real count)
 - Comprehensive property management table
 - Approve/Reject functionality
 - Detailed property preview modal
+- Refresh button for manual updates
 - Professional enterprise UI
+
+### Payment System
+- Paystack integration for contact details
+- Payment required for all property types (₦2,000)
+- Secure payment processing
+- Contact unlock after successful payment
+- Payment state persistence
 
 ## Design System
 
@@ -61,9 +84,14 @@ npm run dev
 
 ### Available Routes
 
-- `/` - Landing page
+- `/` - Splash page
+- `/home` - Main landing page with property listings
+- `/property/[id]` - Property detail page with image gallery
 - `/seller` - Seller dashboard
-- `/admin` - Admin panel
+- `/admin-portal/login` - Admin login (requires access key)
+- `/admin-portal/dashboard` - Admin dashboard
+- `/login` - User login
+- `/signup` - User registration
 
 ## Tech Stack
 
@@ -72,6 +100,9 @@ npm run dev
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
+- **Payment**: Paystack Integration
+- **State Management**: React Context API
+- **Storage**: LocalStorage (for demo purposes)
 
 ## Project Structure
 
@@ -98,6 +129,29 @@ deanhomes/
 npm run build
 npm start
 ```
+
+## Deployment
+
+See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed instructions on:
+- Pushing to GitHub
+- Deploying to Vercel
+- Setting up Paystack
+- Environment variables configuration
+
+## Payment Setup
+
+See [PAYSTACK_SETUP.md](./PAYSTACK_SETUP.md) for Paystack integration details.
+
+## Quick Start
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Create `.env.local` file with your Paystack key:
+   ```
+   NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY=pk_test_your_key_here
+   ```
+4. Run development server: `npm run dev`
+5. Open [http://localhost:3000](http://localhost:3000)
 
 ## License
 
