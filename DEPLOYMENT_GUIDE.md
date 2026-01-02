@@ -43,6 +43,24 @@ If you need a token:
 
 ## Step 2: Deploy to Vercel (Recommended for Next.js)
 
+### ⚠️ Important: Two Separate Deployments
+
+Since you have both a **main site** and **admin portal**, you have two options:
+
+**Option A: Deploy Once (Simpler)**
+- One deployment serves both
+- Main site: `your-url.vercel.app`
+- Admin portal: `your-url.vercel.app/admin-portal/login`
+- See steps below
+
+**Option B: Deploy Separately (Recommended)**
+- Deploy the same repo to Vercel **twice**
+- Main site: `deanhomes-main.vercel.app`
+- Admin portal: `deanhomes-admin.vercel.app`
+- See [SEPARATE_DEPLOYMENT.md](./SEPARATE_DEPLOYMENT.md) for detailed instructions
+
+### Deploying (Option A - Single Deployment)
+
 ### Why Vercel?
 - Free hosting for Next.js
 - Automatic deployments from GitHub
@@ -77,7 +95,17 @@ If you need a token:
 
 5. **Get Your Live URL**
    - Vercel will give you a URL like: `deanhomes.vercel.app`
+   - Main site: `deanhomes.vercel.app`
+   - Admin portal: `deanhomes.vercel.app/admin-portal/login`
    - You can also add a custom domain later
+
+### Deploying Separately (Option B - Two Projects)
+
+If you want completely separate deployments:
+1. Deploy the same repository to Vercel **twice**
+2. Name them: `deanhomes-main` and `deanhomes-admin`
+3. Both will work independently
+4. See [SEPARATE_DEPLOYMENT.md](./SEPARATE_DEPLOYMENT.md) for full guide
 
 ---
 
