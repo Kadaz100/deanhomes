@@ -7,10 +7,15 @@ The application now includes Paystack payment integration for apartment listings
 
 ### 1. Get Your Paystack Keys
 
+**Detailed instructions:** See [HOW_TO_GET_PAYSTACK_KEY.md](./HOW_TO_GET_PAYSTACK_KEY.md) for step-by-step guide.
+
+**Quick steps:**
 1. Go to [Paystack Dashboard](https://dashboard.paystack.com/)
-2. Sign up or log in
-3. Navigate to **Settings** → **API Keys & Webhooks**
-4. Copy your **Public Key** (starts with `pk_test_` for test mode or `pk_live_` for live mode)
+2. Sign up or log in (complete business verification if needed)
+3. Navigate to **Settings** (left sidebar) → **API Keys & Webhooks**
+4. Copy your **Test Public Key** (starts with `pk_test_...`) for testing
+5. Copy your **Live Public Key** (starts with `pk_live_...`) for production
+6. **Important**: Use the **Public Key** (pk_...), NOT the Secret Key (sk_...)
 
 ### 2. Configure Environment Variables
 
