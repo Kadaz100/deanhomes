@@ -189,19 +189,19 @@ export default function SellerDashboard() {
           <nav className="p-4">
             {menuItems.map((item) => {
               const Icon = item.icon
+              const isActive = activeTab === item.id
               return (
                 <button
                   key={item.id}
-                  onClick={() => setActiveTab(item.id)}
-                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl mb-2 transition-all duration-200 ${
-                    activeTab === item.id
-                      ? 'bg-purple-50 text-purple-700 shadow-sm'
-                      : 'text-gray-700 hover:bg-gray-50'
-                  }`}
                   onClick={() => {
                     setActiveTab(item.id)
                     setSidebarOpen(false)
                   }}
+                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl mb-2 transition-all duration-200 ${
+                    isActive
+                      ? 'bg-purple-50 text-purple-700 shadow-sm'
+                      : 'text-gray-700 hover:bg-gray-50'
+                  }`}
                 >
                   <Icon className="w-5 h-5" />
                   <span className="font-medium">{item.label}</span>
