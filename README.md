@@ -1,5 +1,7 @@
 # Dean Homes - Real Estate Platform
 
+> Latest deployment: Fixed build errors and ready for production
+
 A modern, premium real estate website platform with Paystack payment integration, featuring:
 - **Landing Page**: Beautiful property search and listing interface with image galleries
 - **Seller Dashboard**: Professional property submission with minimum 4-image requirement
